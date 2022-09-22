@@ -1,0 +1,14 @@
+car.m = 1463; % [kg] vehicle mass
+car.Iz = 1968; % [kg m2] moment of inertia of the vehicle
+car.lf = 0.971; % [m] CG-front axle distance
+car.lr = 1.566; % [m] CG-rear axle distance
+car.Caf = 11.9*car.m*9.81*car.lr/(car.lr+car.lr); % [N rad-1] cornering stiffness of the front axle
+car.Car = 13.6*car.m*9.81*car.lf/(car.lr+car.lr); % [N rad-1] cornering stiffness of the rear axle
+car.Clf = 33*car.m*9.81*car.lr/(car.lr+car.lr); % [N rad-1] longitudinal stiffness of the front axle
+car.Clr = 29.6*car.m*9.81*car.lf/(car.lr+car.lr); % [N rad-1] longitudinal stiffness of the rear axle
+car.FxfMax = 1*car.m*9.81*car.lr/(car.lr+car.lr); % [N] longitudinal saturational force of the front axle
+car.FyfMax = 0.95*car.m*9.81*car.lr/(car.lr+car.lr); % [N] lateral saturational force of the front axle
+car.FxrMax = 1.12*car.m*9.81*car.lf/(car.lr+car.lr); % [N] longitudinal saturational force of the rear axle
+car.FyrMax = 1.05*car.m*9.81*car.lf/(car.lr+car.lr); % [N] lateral saturational force of the rear axle
+car.rad = 0.306; % [m] effective wheel radius
+car.Iw = 20; % [kg m2] moment of inertia of wheels (including axle and transmission)
