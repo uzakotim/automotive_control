@@ -83,7 +83,7 @@ Cden_v = cell2mat(Cden_v);
 
 run('velocity_reg.m');
 run('postion_reg.m');
-open_system('two_cars_with_radar.slx');
+open_system('two_cars_with_radar_20a.slx');
 
 
 
