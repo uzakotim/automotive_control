@@ -7,11 +7,11 @@ classdef ABS < matlab.System
     % Public, tunable properties
     properties
         % Maximum slip ratio that shouldn't be excessed. Maximally 1 [-] 
-        lambda_max = 0;
+        lambda_max = 0; 
         % Slip ratio to leave relaxation phase. Maximally 1, lower than Maximum slip ratio [-] 
         lambda_min_relaxing = 0;
         % Minimum slip ratio for ABS to work. If below only the fast ramp will be used. Maximally 1, lower than relaxation slip ratio [-] 
-        lambda_min = 0;
+        lambda_min = 0; 
         % Fast ramp slope
         fast_ramp = 0;
         % Slow ramp slope
@@ -68,7 +68,7 @@ classdef ABS < matlab.System
                         end
                     else
                         obj.prevLag = obj.Brake_Nm;                 % Wheels have got locked
-                        obj.Brake_Nm = obj.Brake_Nm *0 ; % *k           
+                        obj.Brake_Nm = obj.Brake_Nm *0; % *k           
                         obj.isRelaxing = true;
                         obj.firstPeak = false;
                     end
